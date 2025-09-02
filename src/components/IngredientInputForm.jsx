@@ -1,7 +1,7 @@
 import React from "react"
 
 
-export default function IngredientInputForm() {
+export default function IngredientInputForm({ showForm, setShowForm }) {
     const units = [
     "teaspoons", "tablespoons", "fluid ounces", "cups", "pints",
     "quarts", "gallons", "milliliters", "liters",
@@ -10,9 +10,9 @@ export default function IngredientInputForm() {
     ];
 
     return (
-        <div id="inputForm" className="flex flex-col items-start gap-[1rem] border-box px-[1rem] py-[0.5em] w-full h-full max-w-[400px] font-['Orbit'] text-white bg-[rgb(205, 177, 161)]">
+        <div id="inputForm" className="flex flex-col relative inset-0 z-100 w-full h-full bg-[rgb(174,100,100)] items-start gap-[1rem] border-box px-[1rem] py-[0.5em] max-w-[400px] font-['Orbit'] text-white bg-[rgb(205, 177, 161)]">
             <div id="numUnits" className="flex flex-col items-start">
-                <span># of Units</span>
+                <span>Number of Units</span>
                 <input type="text" placeholder="1" className="border-box rounded-sm p-[0.1em] bg-[rgb(188,120,120))]"></input>
             </div>
             
@@ -32,7 +32,7 @@ export default function IngredientInputForm() {
                     </span>
                 </div>
             </div>
-            <button id="addButton" className="px-[0.5em] py-[0.1em] border-box rounded-sm text-sm bg-[rgb(118,50,50)]">
+            <button onClick={() => setShowForm(false)} id="addButton" className="px-[0.5em] py-[0.1em] border-box rounded-sm text-sm bg-[rgb(118,50,50)]">
                 Add
             </button>
                 
