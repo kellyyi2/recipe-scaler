@@ -1,10 +1,12 @@
-import { useState } from 'react'
-import './styles/App.css'
-import Header from './components/Header.jsx'
-import ContentBox from './components/ContentBox.jsx'
+import { useState } from 'react';
+import './styles/App.css';
+import Header from './components/Header.jsx';
+import ContentBox from './components/ContentBox.jsx';
+import { RecipeScaler } from './components/RecipeScaler.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [originalServings, setOriginalServings] = useState(1);
+  const [newServings, setNewServings] = useState(1);
 
   return (
   
