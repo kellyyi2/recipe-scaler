@@ -22,7 +22,7 @@ export default function IngredientDisplay({ showForm, setShowForm }) {
                 ))}
             </ul>
             )}
-
+ 
         </div>
     );
 }
