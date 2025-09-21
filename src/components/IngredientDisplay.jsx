@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import IngredientInputForm from "./IngredientInputForm";
 
-export default function IngredientDisplay({ showForm, setShowForm }) {
-    const [ingredients, setIngredients] = useState([]);
+export default function IngredientDisplay({ showForm, setShowForm, ingredients, setIngredients }) {
+    
 
     return (
         <div className="flex flex-col w-full h-full bg-[rgb(174,100,100)]">

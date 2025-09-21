@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-export default function IngredientInputForm({ setShowForm, ingredients, setIngredients, setShowList }) {
+export default function IngredientInputForm({ setShowForm, ingredients, setIngredients }) {
     const units = [
     "", "tablespoons", "teaspoons", "fluid ounces", "cups", "pints",
     "quarts", "gallons", "milliliters", "liters",
@@ -38,7 +38,6 @@ export default function IngredientInputForm({ setShowForm, ingredients, setIngre
                 if (!numUnit || !ingName) return;
                 setIngredients([...ingredients, { numUnit, ingName, unit }]);
                 setShowForm(false);
-                setShowList(true);
                 }} id="addButton" className="px-[0.5em] py-[0.1em] border-box rounded-sm text-sm bg-[rgb(118,50,50)]">
                 Add
             </button>
